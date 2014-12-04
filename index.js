@@ -10,4 +10,6 @@ var API = Blizzard.Games();
 
 API.Warcraft.Achievements.getByID(2121).then(function(Achievement) {
   console.log(Achievement);
+}).fail(function(err) {
+  console.log(err);
 });
