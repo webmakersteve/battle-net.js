@@ -1,5 +1,5 @@
 {
-  "name": "BattleNetAPI",
+  "name": "battlenet.js",
   "version": "0.0.1",
   "description": "Enables use of the Blizzard Battle.net API",
   "main": "index.js",
