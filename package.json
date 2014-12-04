@@ -1,0 +1,27 @@
+{
+  "name": "BattleNetAPI",
+  "version": "0.0.1",
+  "description": "Enables use of the Blizzard Battle.net API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "keywords": [
+    "Blizzard",
+    "Warcraft",
+    "Starcraft",
+    "Diablo",
+    "Battle.net"
+  ],
+  "author": "Stephen Parente",
+  "license": "GPL",
+  "dependencies": {
+    "kew": "^0.5.0-alpha.1",
+    "request": "^2.49.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.0.1"
+  }
+}
