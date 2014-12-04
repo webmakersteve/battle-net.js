@@ -14,7 +14,12 @@
     "Battle.net"
   ],
   "author": "Stephen Parente",
-  "license": "GPL",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webmakersteve/battle-net.js.git" 
+  },
+  "homepage": "https://github.com/webmakersteve/battle-net.js",
   "dependencies": {
     "kew": "^0.5.0-alpha.1",
     "request": "^2.49.0"
