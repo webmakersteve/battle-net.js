@@ -1,10 +1,13 @@
 /**
-* @fileoverview Expose db client.
+* @fileoverview Expose Blizzard client.
 */
 
 var Client;
 module.exports = Client = require('./lib/client')
 
-var x = new Client(123);
+var Blizzard = new Client(123);
+var API = Blizzard.Games();
 
-console.log(x);
+API.Warcraft.Achievements.getByID(2121).then(function(Achievement) {
+  console.log(Achievement);
+});
