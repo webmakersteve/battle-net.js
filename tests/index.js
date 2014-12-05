@@ -178,7 +178,7 @@ describe('Character tests', function () {
 
   it('should find this character', function (done) {
 
-    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaosity')
+    Blizzard.Games.Warcraft.Characters.get('Maelstrom', 'Chaosity')
       .then(function (data) {
         assert.ok(data, "Character data is empty");
         done();
@@ -192,7 +192,7 @@ describe('Character tests', function () {
   it('should not find this character', function (done) {
 
     this.timeout(3000);
-    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaositynoexists')
+    Blizzard.Games.Warcraft.Characters.get('Maelstrom', 'Chaositynoexists')
       .then(function (data) {
         done(new Error("Didn't find it"));
       })
@@ -205,7 +205,7 @@ describe('Character tests', function () {
   it('should get the feed of this character', function (done) {
 
     this.timeout(3000);
-    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaosity', ['feed'])
+    Blizzard.Games.Warcraft.Characters.get('Maelstrom', 'Chaosity', ['feed'])
       .then(function (data) {
         assert.ok(data.body.feed, "Should have feed field set");
         done();
