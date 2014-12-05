@@ -147,6 +147,8 @@ describe('Warcraft tests', function() {
   // Achievement description
   it('should fetch an achievement description', function (done) {
 
+    this.timeout(6000);
+
     var deferred = Blizzard.Games.Warcraft.Achievements.getByID(212);
 
     assert.doesNotThrow(function () {
@@ -157,6 +159,60 @@ describe('Warcraft tests', function() {
         done(new Error("Did not recieve a valid response"));
       });
     });
+
+  });
+
+});
+
+describe('Character tests', function () {
+
+  var Blizzard;
+
+  beforeEach(function (done) {
+
+    this.timeout(6000);
+
+    Blizzard = new Client(validAPIKey);
+    done();
+  });
+
+  it('should find this character', function (done) {
+
+    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaosity')
+      .then(function (data) {
+        assert.ok(data, "Character data is empty");
+        done();
+      })
+      .fail(function (err) {
+        done(err);
+      });
+
+  });
+
+  it('should not find this character', function (done) {
+
+    this.timeout(3000);
+    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaositynoexists')
+      .then(function (data) {
+        done(new Error("Didn't find it"));
+      })
+      .fail(function (err) {
+        done();
+      });
+
+  });
+
+  it('should get the feed of this character', function (done) {
+
+    this.timeout(3000);
+    Blizzard.Games.Warcraft.Character.get('Maelstrom', 'Chaosity', ['feed'])
+      .then(function (data) {
+        assert.ok(data.body.feed, "Should have feed field set");
+        done();
+      })
+      .fail(function (err) {
+        done(err);
+      });
 
   });
 
