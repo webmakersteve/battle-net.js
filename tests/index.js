@@ -10,7 +10,7 @@ var assert = require('assert')
 var nock = require('nock')
 
 var Client = require('../index');
-var validAPIKey = require('../key');
+var validAPIKey = process.env.BLIZZ_KEY || require('../key');
 
 describe('Client tests', function () {
 
