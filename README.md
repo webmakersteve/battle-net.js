@@ -51,21 +51,23 @@ After calling the API method, you retrieve the data asynchronously through a pro
 
 # API
 
+## Warcraft
+
 Here's the part everyone came to see. Just how do we get that data from the API? The API is organized by game. Currently, only World of Warcraft is supported. `client` will refer to an instantiated object of the BattleNetAPI Class.
 
-## client.Games.Achievements.getById(id)
+### client.Games.Warcraft.Achievements.getById(id)
 
 Fetches achievement data for a given achievement ID.
 
-## client.Games.Auctions.getByRealm(realm)
+### client.Games.Warcraft.Auctions.getByRealm(realm)
 
 Fetches the auctions for a given realm
 
-## client.Challenge.getRealmLeaderboard(realm)
+### client.Games.Warcraft.Challenge.getRealmLeaderboard(realm)
 
 Returns realm leaderboards for a given realm.
 
-## client.Characters.get(realm, name, fields)
+### client.Games.Warcraft.Characters.get(realm, name, fields)
 
 Returns a character specified. The fields object is an array of data keys for the data you are requesting. If you want to get responses faster, only request the data you're going to use.
 
@@ -76,81 +78,85 @@ For example:
   client.Characters.get('Maelstrom', 'Chaosity', fields);
 ```
 
-## client.Data.getBattlegroups()
+### client.Games.Warcraft.Data.getBattlegroups()
 
 Get a list of the battlegroups.
 
-## client.Data.getRaces()
+### client.Games.Warcraft.Data.getRaces()
 
 Gets a list of races and their corresponding IDs.
 
-## client.Data.getClasses()
+### client.Games.Warcraft.Data.getClasses()
 
 Gets a list of classes and their corresponding IDs.
 
-## client.Data.getAchievements()
+### client.Games.Warcraft.Data.getAchievements()
 
 Gets a list of achievements and their IDs.
 
-## client.Data.getGuildRewards()
+### client.Games.Warcraft.Data.getGuildRewards()
 
 Gets a list of guild rewards.
 
-## client.Data.getGuildPerks()
+### client.Games.Warcraft.Data.getGuildPerks()
 
 Gets a list of guild parks (*RIP* Have Group, Will Travel)
 
-## client.Data.getGuildAchievements()
+### client.Games.Warcraft.Data.getGuildAchievements()
 
 Gets a list of guild achievements.
 
-## client.Data.getItemClasses()
+### client.Games.Warcraft.Data.getItemClasses()
 
-
-
-## client.Data.getTalents()
+### client.Games.Warcraft.Data.getTalents()
 
 Gets a list of talents
 
-## client.Data.getPetTypes()
+### client.Data.getPetTypes()
 
-For Pokémon masters.
+For Pokémon masters. Gets a list of the pet types.
 
-## client.Guild.get(realm, name, fields)
+### client.Guild.get(realm, name, fields)
 
 Get a guild on a given realm with a given name. Names will be normalized, so feel free to use spaces and all of that. Fields works the same way on guild as it does on character. Request the data you want by putting it in array (e.g. `['feed']`).
 
-## client.Item.getItemByID(ID)
+### client.Games.Warcraft.Item.getItemByID(ID)
 
 Gets an item by its ID.
 
-## client.Item.getSetByID(ID)
+### client.Games.Warcraft.Item.getSetByID(ID)
 
 Gets a set of items by its set ID. Judgment anyone?
 
-## client.Pets.getAbilityByID(ID)
+### client.Games.Warcraft.Pets.getAbilityByID(ID)
 
-## client.Pets.getSpeciesByID(ID)
+Gets a pet ability by its ID
 
-## client.Pets.getStatsBySpecies(speciesID)
+### client.Games.Warcraft.Pets.getSpeciesByID(ID)
 
-## client.Pvp.getByBracket(bracket)
+Gets a pet species by its ID
+
+### client.Games.Warcraft.Pets.getStatsBySpecies(speciesID)
+
+Gets pet stats based on their species ID
+
+### client.Games.Warcraft.Pvp.getByBracket(bracket)
 
 Gets leaderboards by bracket. E.g. `client.Pvp.getByBracket('3v3');`
 
-## client.Quests.getByID(ID)
+### client.Games.Warcraft.Quests.getByID(ID)
 
 Gets quest information by ID
 
-## client.Realms.getStatusList()
+### client.Games.Warcraft.Realms.getStatusList()
 
 Gets a list of realms and their realm status.
 
-## client.Recipes.getByID(ID)
+### client.Games.Warcraft.Recipes.getByID(ID)
 
 Gets a recipe by its ID
 
-## client.Spells.getByID(ID)
+### client.Games.Warcraft.Spells.getByID(ID)
 
 Gets a spell by its ID
 
