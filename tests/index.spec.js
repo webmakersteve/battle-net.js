@@ -6,8 +6,8 @@
 'use strict';
 
 // Module Dependencies.
-var assert = require('assert')
-var nock = require('nock')
+var assert = require('assert');
+var nock = require('nock');
 
 var Client = require('../index');
 var validAPIKey = process.env.BLIZZ_KEY || require('../key');
@@ -29,8 +29,8 @@ describe('Client tests', function () {
         assert.equal(data.statusCode,200, "Status code should be 200");
         done();
       })
-      .fail(function(error) {
-        assert.fail(error, "200", "Should have successfully connected to Google");
+      .catch(function(error) {
+        assert.catch(error, "200", "Should have successfully connected to Google");
         done();
       });
 
@@ -49,7 +49,7 @@ describe('Client tests', function () {
 
     var promise = Blizzard._get('https://www.google.com');
 
-    assert.equal(promise._isPromise, true, 'Is not a promise');
+    assert.equal(typeof promise.then, 'function', 'Is not a promise');
     done();
 
 
@@ -85,19 +85,6 @@ describe('Client tests', function () {
 
   });
 
-  it('should create an error object', function (done) {
-
-    var err = Blizzard.createError({});
-
-    if (!(err instanceof Error)) {
-      assert.fail(err, "Error", "is not an error");
-    }
-
-    done();
-
-  });
-
-
 });
 
 describe('Utility tests', function () {
@@ -124,7 +111,7 @@ describe('Utility tests', function () {
       code: 210,
       type: 'forbidden',
       detail: 'account not active'
-    }
+    };
 
     var err = Blizzard.Utilities.error.createFromResponse({body: body});
 
@@ -155,7 +142,7 @@ describe('Warcraft tests', function() {
       deferred.then(function (response) {
 
         done();
-      }).fail(function (error) {
+      }).catch(function (error) {
         done(new Error("Did not recieve a valid response"));
       });
     });
@@ -183,7 +170,7 @@ describe('Character tests', function () {
         assert.ok(data, "Character data is empty");
         done();
       })
-      .fail(function (err) {
+      .catch(function (err) {
         done(err);
       });
 
@@ -196,7 +183,7 @@ describe('Character tests', function () {
       .then(function (data) {
         done(new Error("Didn't find it"));
       })
-      .fail(function (err) {
+      .catch(function (err) {
         done();
       });
 
@@ -210,7 +197,7 @@ describe('Character tests', function () {
         assert.ok(data.body.feed, "Should have feed field set");
         done();
       })
-      .fail(function (err) {
+      .catch(function (err) {
         done(err);
       });
 

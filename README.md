@@ -42,7 +42,7 @@ The API uses kew to expose a promise-based API on the Client. If you are unfamil
       .then(function (data) {
         // Thanks for the data
       })
-      .fail(function (err) {
+      .catch(function (err) {
         // Something went wrong
       });
 ```
