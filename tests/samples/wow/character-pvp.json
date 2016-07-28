@@ -1,0 +1,69 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "pvp": {
+        "brackets": {
+            "ARENA_BRACKET_2v2": {
+                "slug": "2v2",
+                "rating": 0,
+                "weeklyPlayed": 0,
+                "weeklyWon": 0,
+                "weeklyLost": 0,
+                "seasonPlayed": 0,
+                "seasonWon": 0,
+                "seasonLost": 0
+            },
+            "ARENA_BRACKET_3v3": {
+                "slug": "3v3",
+                "rating": 0,
+                "weeklyPlayed": 0,
+                "weeklyWon": 0,
+                "weeklyLost": 0,
+                "seasonPlayed": 0,
+                "seasonWon": 0,
+                "seasonLost": 0
+            },
+            "ARENA_BRACKET_RBG": {
+                "slug": "rbg",
+                "rating": 0,
+                "weeklyPlayed": 0,
+                "weeklyWon": 0,
+                "weeklyLost": 0,
+                "seasonPlayed": 0,
+                "seasonWon": 0,
+                "seasonLost": 0
+            },
+            "ARENA_BRACKET_2v2_SKIRMISH": {
+                "slug": "2v2s",
+                "rating": 0,
+                "weeklyPlayed": 0,
+                "weeklyWon": 0,
+                "weeklyLost": 0,
+                "seasonPlayed": 0,
+                "seasonWon": 0,
+                "seasonLost": 0
+            },
+            "UNKNOWN": {
+                "slug": "unknown",
+                "rating": 0,
+                "weeklyPlayed": 0,
+                "weeklyWon": 0,
+                "weeklyLost": 0,
+                "seasonPlayed": 0,
+                "seasonWon": 0,
+                "seasonLost": 0
+            }
+        }
+    },
+    "totalHonorableKills": 4144
+}

@@ -1,0 +1,67 @@
+{
+    "lastModified": 1469482818000,
+    "name": "Zaryun",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 3,
+    "race": 26,
+    "gender": 0,
+    "level": 85,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/44/83279916-avatar.jpg",
+    "calcClass": "Y",
+    "faction": 1,
+    "hunterPets": [{
+        "name": "Ahbizmul",
+        "creature": 7432,
+        "slot": 1,
+        "spec": {
+            "name": "Ferocity",
+            "role": "DPS",
+            "backgroundImage": "bg-deathknight-blood",
+            "icon": "ability_druid_kingofthejungle",
+            "description": "Driven by a frenzied persistence to pursue prey, these beasts stop at nothing to achieve victory; even death is temporary for these predators.",
+            "order": 0
+        },
+        "calcSpec": "a",
+        "familyId": 2,
+        "familyName": "Cat"
+    }, {
+        "name": "Chipotle",
+        "creature": 50058,
+        "slot": 2,
+        "spec": {
+            "name": "Tenacity",
+            "role": "TANK",
+            "backgroundImage": "bg-deathknight-blood",
+            "icon": "ability_druid_demoralizingroar",
+            "description": "Stalwart and veteran defenders who unquestionably place their thick hides and protective exteriors in harm's way for their allies.",
+            "order": 1
+        },
+        "calcSpec": "Z",
+        "familyId": 21,
+        "familyName": "Turtle"
+    }, {
+        "name": "Cintra",
+        "creature": 28297,
+        "slot": 0,
+        "calcSpec": "",
+        "familyId": 2,
+        "familyName": "Cat"
+    }, {
+        "name": "Eric",
+        "creature": 46910,
+        "slot": 7,
+        "calcSpec": "",
+        "familyId": 45,
+        "familyName": "Core Hound"
+    }, {
+        "name": "Kataang",
+        "creature": 45335,
+        "slot": 5,
+        "calcSpec": "",
+        "familyId": 50,
+        "familyName": "Fox"
+    }],
+    "totalHonorableKills": 1076
+}

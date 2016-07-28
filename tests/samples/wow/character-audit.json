@@ -1,0 +1,57 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "audit": {
+        "numberOfIssues": 5,
+        "slots": {
+            "2": 1,
+            "10": 2,
+            "6": 1,
+            "4": 1,
+            "15": 2,
+            "14": 1,
+            "11": 2
+        },
+        "emptyGlyphSlots": 3,
+        "unspentTalentPoints": 6,
+        "noSpec": false,
+        "unenchantedItems": {
+            "2": 1,
+            "10": 1,
+            "6": 1,
+            "4": 1,
+            "15": 1,
+            "14": 1,
+            "11": 1
+        },
+        "emptySockets": 2,
+        "itemsWithEmptySockets": {
+            "15": 2
+        },
+        "appropriateArmorType": 1,
+        "inappropriateArmorType": {},
+        "lowLevelItems": {},
+        "lowLevelThreshold": 0,
+        "missingExtraSockets": {},
+        "missingBlacksmithSockets": {},
+        "missingEnchanterEnchants": {
+            "10": 1,
+            "11": 1
+        },
+        "missingEngineerEnchants": {},
+        "missingScribeEnchants": {},
+        "nMissingJewelcrafterGems": 0,
+        "missingLeatherworkerEnchants": {}
+    },
+    "totalHonorableKills": 4144
+}

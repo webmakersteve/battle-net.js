@@ -1,0 +1,96 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "talents": [{
+        "selected": true,
+        "talents": [],
+        "spec": {
+            "name": "Shadow",
+            "role": "DPS",
+            "backgroundImage": "bg-priest-shadow",
+            "icon": "spell_shadow_shadowwordpain",
+            "description": "Uses sinister Shadow magic, especially damage-over-time spells, to eradicate enemies.",
+            "order": 2
+        },
+        "calcTalent": "",
+        "calcSpec": "b"
+    }, {
+        "talents": [{
+            "tier": 4,
+            "column": 1,
+            "spell": {
+                "id": 10060,
+                "name": "Power Infusion",
+                "icon": "spell_holy_powerinfusion",
+                "description": "Infuses you with power for 20 sec, increasing haste by 25% and reducing the mana cost of all spells by 20%.",
+                "castTime": "Instant",
+                "cooldown": "2 min cooldown"
+            }
+        }, {
+            "tier": 3,
+            "column": 0,
+            "spell": {
+                "id": 129250,
+                "name": "Power Word: Solace",
+                "subtext": "Talent",
+                "icon": "ability_priest_flashoflight",
+                "description": "Strikes an enemy with heavenly power, dealing 22,007 Holy damage and restoring 0.75% of your maximum mana.",
+                "range": "40 yd range",
+                "castTime": "Instant",
+                "cooldown": "12 sec cooldown"
+            }
+        }, {
+            "tier": 0,
+            "column": 1,
+            "spell": {
+                "id": 193134,
+                "name": "Castigation",
+                "icon": "spell_holy_searinglightpriest",
+                "description": "Penance fires one additional bolt of holy light over its duration.",
+                "castTime": "Passive"
+            }
+        }, {
+            "tier": 5,
+            "column": 1,
+            "spell": {
+                "id": 110744,
+                "name": "Divine Star",
+                "icon": "spell_priest_divinestar",
+                "description": "Fires a Divine Star forward 24 yds, healing allies in its path for 6,603 and dealing 10,638 Holy damage to enemies. After reaching its destination, the Divine Star returns to you, healing allies and damaging enemies in its path again.",
+                "range": "30 yd range",
+                "powerCost": "2.5% of base mana",
+                "castTime": "Instant",
+                "cooldown": "15 sec cooldown"
+            }
+        }],
+        "spec": {
+            "name": "Discipline",
+            "role": "HEALING",
+            "backgroundImage": "bg-priest-discipline",
+            "icon": "spell_holy_powerwordshield",
+            "description": "Uses magic to shield allies from taking damage as well as heal their wounds.",
+            "order": 0
+        },
+        "calcTalent": "1..011.",
+        "calcSpec": "a"
+    }, {
+        "talents": [],
+        "calcTalent": "",
+        "calcSpec": ""
+    }, {
+        "talents": [],
+        "calcTalent": "",
+        "calcSpec": ""
+    }],
+    "totalHonorableKills": 4144
+}

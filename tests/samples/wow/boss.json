@@ -1,0 +1,19 @@
+{
+    "id": 24723,
+    "name": "Selin Fireheart",
+    "urlSlug": "selin-fireheart",
+    "description": "Once a respected captain of Kael'Thas Sunstrider's personal guard, Selin Fireheart has maintained an unswervingly fierce loyalty to his lord while losing his sanity. Selin has been seduced by the demonic energies of the crystals which surround his chamber, and cannot stop from reveling in their vile power. He will slay any who dare approach the Magister's Terrace and will drink the magic, life, and blood from their dead bodies.",
+    "zoneId": 4131,
+    "availableInNormalMode": true,
+    "availableInHeroicMode": true,
+    "health": 150465,
+    "heroicHealth": 577590,
+    "level": 70,
+    "heroicLevel": 71,
+    "journalId": 530,
+    "npcs": [{
+        "id": 24723,
+        "name": "Selin Fireheart",
+        "urlSlug": "selin-fireheart"
+    }]
+}

@@ -1,0 +1,34 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "petSlots": [{
+        "slot": 1,
+        "battlePetGuid": "000000000582B281",
+        "isEmpty": false,
+        "isLocked": false,
+        "abilities": [1359, 1357, 1354]
+    }, {
+        "slot": 2,
+        "battlePetGuid": "0000000006C65C34",
+        "isEmpty": false,
+        "isLocked": false,
+        "abilities": [210, 901, 1535]
+    }, {
+        "slot": 3,
+        "battlePetGuid": "0000000007123745",
+        "isEmpty": false,
+        "isLocked": false,
+        "abilities": [406, 453, 490]
+    }],
+    "totalHonorableKills": 4144
+}

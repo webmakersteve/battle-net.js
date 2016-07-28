@@ -1,0 +1,25 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "appearance": {
+        "faceVariation": 1,
+        "skinColor": 7,
+        "hairVariation": 5,
+        "hairColor": 5,
+        "featureVariation": 3,
+        "showHelm": true,
+        "showCloak": true,
+        "customDisplayOptions": [0, 0, 0]
+    },
+    "totalHonorableKills": 4144
+}

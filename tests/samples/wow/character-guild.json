@@ -1,0 +1,32 @@
+{
+    "lastModified": 1469118034000,
+    "name": "Altaira",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 2,
+    "race": 10,
+    "gender": 1,
+    "level": 100,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/49/88533809-avatar.jpg",
+    "calcClass": "b",
+    "faction": 1,
+    "guild": {
+        "name": "Fire Exit",
+        "realm": "Maelstrom",
+        "battlegroup": "Shadowburn",
+        "members": 70,
+        "achievementPoints": 1630,
+        "emblem": {
+            "icon": 21,
+            "iconColor": "ffb1b8b1",
+            "iconColorId": 14,
+            "border": 0,
+            "borderColor": "ffffffff",
+            "borderColorId": 14,
+            "backgroundColor": "ffb1002e",
+            "backgroundColorId": 5
+        }
+    },
+    "totalHonorableKills": 603
+}

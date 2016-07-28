@@ -1,0 +1,593 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "items": {
+        "averageItemLevel": 514,
+        "averageItemLevelEquipped": 522,
+        "head": {
+            "id": 122250,
+            "name": "Tattered Dreadmist Mask",
+            "icon": "inv_helmet_29",
+            "quality": 7,
+            "itemLevel": 605,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 133
+            }, {
+                "stat": 36,
+                "amount": 177
+            }, {
+                "stat": 7,
+                "amount": 199
+            }],
+            "armor": 61,
+            "context": "",
+            "bonusLists": [583],
+            "artifactId": 0,
+            "displayInfoId": 31263,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "neck": {
+            "id": 94489,
+            "name": "Tyrannical Gladiator's Pendant of Cruelty",
+            "icon": "inv_misc_pvp_neck_a3",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 11
+            }, {
+                "stat": 32,
+                "amount": 19
+            }, {
+                "stat": 49,
+                "amount": 16
+            }, {
+                "stat": 5,
+                "amount": 27
+            }, {
+                "stat": 7,
+                "amount": 40
+            }],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "shoulder": {
+            "id": 122360,
+            "name": "Tattered Dreadmist Mantle",
+            "icon": "inv_misc_bone_taurenskull_01",
+            "quality": 7,
+            "itemLevel": 605,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 99
+            }, {
+                "stat": 32,
+                "amount": 133
+            }, {
+                "stat": 7,
+                "amount": 149
+            }],
+            "armor": 56,
+            "context": "",
+            "bonusLists": [583],
+            "artifactId": 0,
+            "displayInfoId": 29798,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "back": {
+            "id": 122262,
+            "name": "Ancient Bloodmoon Cloak",
+            "icon": "inv_misc_cape_05",
+            "quality": 7,
+            "itemLevel": 605,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 75
+            }, {
+                "stat": 36,
+                "amount": 50
+            }, {
+                "stat": 32,
+                "amount": 50
+            }, {
+                "stat": 7,
+                "amount": 112
+            }],
+            "armor": 37,
+            "context": "",
+            "bonusLists": [583],
+            "artifactId": 0,
+            "displayInfoId": 23553,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "chest": {
+            "id": 122384,
+            "name": "Tattered Dreadmist Robe",
+            "icon": "inv_chest_cloth_49",
+            "quality": 7,
+            "itemLevel": 605,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 133
+            }, {
+                "stat": 32,
+                "amount": 177
+            }, {
+                "stat": 7,
+                "amount": 199
+            }],
+            "armor": 75,
+            "context": "",
+            "bonusLists": [583],
+            "artifactId": 0,
+            "displayInfoId": 29792,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "tabard": {
+            "id": 43348,
+            "name": "Tabard of the Explorer",
+            "icon": "inv_chest_cloth_30",
+            "quality": 4,
+            "itemLevel": 1,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 54722,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "wrist": {
+            "id": 94380,
+            "name": "Tyrannical Gladiator's Cuffs of Meditation",
+            "icon": "inv_bracer_cloth_pvppriest_f_01",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "enchant": 4414,
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 11
+            }, {
+                "stat": 49,
+                "amount": 19
+            }, {
+                "stat": 32,
+                "amount": 16
+            }, {
+                "stat": 5,
+                "amount": 27
+            }, {
+                "stat": 7,
+                "amount": 40
+            }],
+            "armor": 9,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 118366,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "enchantDisplayInfoId": 4414
+            }
+        },
+        "hands": {
+            "id": 94328,
+            "name": "Tyrannical Gladiator's Mooncloth Gloves",
+            "icon": "inv_glove_cloth_pvppriest_f_01",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "gem0": 76656,
+                "enchant": 4433,
+                "set": [94328],
+                "transmogItem": 30151,
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 14
+            }, {
+                "stat": 49,
+                "amount": 20
+            }, {
+                "stat": 5,
+                "amount": 32
+            }, {
+                "stat": 36,
+                "amount": 24
+            }, {
+                "stat": 7,
+                "amount": 54
+            }],
+            "armor": 13,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 118368,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 30151,
+                "enchantDisplayInfoId": 4433,
+                "itemAppearanceModId": 0
+            }
+        },
+        "waist": {
+            "id": 94425,
+            "name": "Tyrannical Gladiator's Cord of Meditation",
+            "icon": "inv_belt_cloth_pvppriest_f_01",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "gem0": 76638,
+                "gem1": 76572,
+                "extraSocket": true,
+                "transmogItem": 28799,
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 14
+            }, {
+                "stat": 49,
+                "amount": 22
+            }, {
+                "stat": 5,
+                "amount": 32
+            }, {
+                "stat": 36,
+                "amount": 21
+            }, {
+                "stat": 7,
+                "amount": 54
+            }],
+            "armor": 12,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 118364,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 28799,
+                "itemAppearanceModId": 0
+            }
+        },
+        "legs": {
+            "id": 122256,
+            "name": "Tattered Dreadmist Leggings",
+            "icon": "inv_pants_08",
+            "quality": 7,
+            "itemLevel": 605,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 133
+            }, {
+                "stat": 36,
+                "amount": 88
+            }, {
+                "stat": 32,
+                "amount": 88
+            }, {
+                "stat": 7,
+                "amount": 199
+            }],
+            "armor": 65,
+            "context": "",
+            "bonusLists": [583],
+            "artifactId": 0,
+            "displayInfoId": 29797,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "feet": {
+            "id": 94468,
+            "name": "Tyrannical Gladiator's Treads of Meditation",
+            "icon": "inv_boot_cloth_pvppriest_f_01",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "gem0": 76677,
+                "enchant": 4429,
+                "transmogItem": 30885,
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 14
+            }, {
+                "stat": 32,
+                "amount": 22
+            }, {
+                "stat": 49,
+                "amount": 21
+            }, {
+                "stat": 5,
+                "amount": 32
+            }, {
+                "stat": 7,
+                "amount": 54
+            }],
+            "armor": 14,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 118365,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {
+                "itemId": 30885,
+                "enchantDisplayInfoId": 4429,
+                "itemAppearanceModId": 0
+            }
+        },
+        "finger1": {
+            "id": 94390,
+            "name": "Tyrannical Gladiator's Band of Cruelty",
+            "icon": "inv_misc_pvp_ringc3",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 11
+            }, {
+                "stat": 32,
+                "amount": 19
+            }, {
+                "stat": 49,
+                "amount": 16
+            }, {
+                "stat": 5,
+                "amount": 27
+            }, {
+                "stat": 7,
+                "amount": 40
+            }],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "finger2": {
+            "id": 94474,
+            "name": "Tyrannical Gladiator's Band of Meditation",
+            "icon": "inv_misc_pvp_ringc3",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 57,
+                "amount": 11
+            }, {
+                "stat": 40,
+                "amount": 19
+            }, {
+                "stat": 5,
+                "amount": 27
+            }, {
+                "stat": 36,
+                "amount": 16
+            }, {
+                "stat": 7,
+                "amount": 40
+            }],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "trinket1": {
+            "id": 94329,
+            "name": "Tyrannical Gladiator's Emblem of Meditation",
+            "icon": "ability_warrior_endlessrage",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 40,
+                "amount": 45
+            }],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "trinket2": {
+            "id": 94338,
+            "name": "Tyrannical Gladiator's Medallion of Meditation",
+            "icon": "inv_jewelry_trinketpvp_02",
+            "quality": 4,
+            "itemLevel": 496,
+            "tooltipParams": {
+                "upgrade": {
+                    "current": 0,
+                    "total": 0,
+                    "itemLevelIncrement": 0
+                },
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 40,
+                "amount": 45
+            }],
+            "armor": 0,
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 0,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        },
+        "mainHand": {
+            "id": 105677,
+            "name": "Hellscream's War Staff",
+            "icon": "inv_stave_2h_pvphorde_a_01_upres",
+            "quality": 7,
+            "itemLevel": 620,
+            "tooltipParams": {
+                "timewalkerLevel": 91
+            },
+            "stats": [{
+                "stat": 5,
+                "amount": 973
+            }, {
+                "stat": 32,
+                "amount": 93
+            }, {
+                "stat": 49,
+                "amount": 101
+            }, {
+                "stat": 7,
+                "amount": 228
+            }],
+            "armor": 0,
+            "weaponInfo": {
+                "damage": {
+                    "min": 360,
+                    "max": 541,
+                    "exactMin": 360.0,
+                    "exactMax": 541.0
+                },
+                "weaponSpeed": 3.3,
+                "dps": 136.51515
+            },
+            "context": "",
+            "bonusLists": [],
+            "artifactId": 0,
+            "displayInfoId": 127169,
+            "artifactAppearanceId": 0,
+            "artifactTraits": [],
+            "relics": [],
+            "appearance": {}
+        }
+    },
+    "totalHonorableKills": 4144
+}

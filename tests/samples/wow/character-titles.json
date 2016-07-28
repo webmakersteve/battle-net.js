@@ -1,0 +1,86 @@
+{
+    "lastModified": 1469482763000,
+    "name": "Chaosity",
+    "realm": "Maelstrom",
+    "battlegroup": "Shadowburn",
+    "class": 5,
+    "race": 10,
+    "gender": 1,
+    "level": 91,
+    "achievementPoints": 11050,
+    "thumbnail": "maelstrom/122/48734074-avatar.jpg",
+    "calcClass": "X",
+    "faction": 1,
+    "titles": [{
+        "id": 74,
+        "name": "Elder %s"
+    }, {
+        "id": 76,
+        "name": "Flame Keeper %s"
+    }, {
+        "id": 121,
+        "name": "Twilight Vanquisher %s"
+    }, {
+        "id": 124,
+        "name": "%s the Hallowed"
+    }, {
+        "id": 129,
+        "name": "%s, Champion of the Frozen Wastes"
+    }, {
+        "id": 133,
+        "name": "Brewmaster %s"
+    }, {
+        "id": 134,
+        "name": "Merrymaker %s"
+    }, {
+        "id": 135,
+        "name": "%s the Love Fool"
+    }, {
+        "id": 137,
+        "name": "Matron %s"
+    }, {
+        "id": 140,
+        "name": "%s of the Nightfall"
+    }, {
+        "id": 143,
+        "name": "%s Jenkins"
+    }, {
+        "id": 155,
+        "name": "%s the Noble"
+    }, {
+        "id": 164,
+        "name": "Starcaller %s"
+    }, {
+        "id": 168,
+        "name": "%s the Pilgrim"
+    }, {
+        "id": 172,
+        "name": "%s the Patient"
+    }, {
+        "id": 173,
+        "name": "%s the Light of Dawn"
+    }, {
+        "id": 175,
+        "name": "%s the Kingslayer"
+    }, {
+        "id": 176,
+        "name": "%s of the Ashen Verdict"
+    }, {
+        "id": 189,
+        "name": "Assistant Professor %s"
+    }, {
+        "id": 314,
+        "name": "%s the Undaunted"
+    }, {
+        "id": 383,
+        "name": "%s, Liberator of Orgrimmar",
+        "selected": true
+    }, {
+        "id": 349,
+        "name": "Darkspear Revolutionary %s"
+    }, {
+        "id": 365,
+        "name": "%s the Crazy Cat Lady"
+    }],
+    "totalHonorableKills": 4144
+}
