@@ -8,8 +8,31 @@ var nock = require('nock');
 // Mock data
 var mock = {
   achievements: require('./samples/wow/achievements.json'),
+  auctionStatus: require('./samples/wow/auction-status.json'),
+  boss: require('./samples/wow/boss.json'),
   bosses: require('./samples/wow/bosses.json'),
+  challengeRealm: require('./samples/wow/challenge-realm.json'),
+  challengeRegion: require('./samples/wow/challenge-region.json'),
   character: require('./samples/wow/character.json'),
+  characterAchievements: require('./samples/wow/character-achievements.json'),
+  characterAppearance: require('./samples/wow/character-appearance.json'),
+  characterAudit: require('./samples/wow/character-audit.json'),
+  characterFeed: require('./samples/wow/character-feed.json'),
+  characterGuild: require('./samples/wow/character-guild.json'),
+  characterHunterPets: require('./samples/wow/character-hunterPets.json'),
+  characterItems: require('./samples/wow/character-items.json'),
+  characterMounts: require('./samples/wow/character-mounts.json'),
+  characterPets: require('./samples/wow/character-pets.json'),
+  characterPetSlots: require('./samples/wow/character-petSlots.json'),
+  characterProfessions: require('./samples/wow/character-professions.json'),
+  characterProgression: require('./samples/wow/character-progression.json'),
+  characterPvp: require('./samples/wow/character-pvp.json'),
+  characterQuests: require('./samples/wow/character-quests.json'),
+  characterReputation: require('./samples/wow/character-reputation.json'),
+  characterStatistics: require('./samples/wow/character-statistics.json'),
+  characterStats: require('./samples/wow/character-stats.json'),
+  characterTalents: require('./samples/wow/character-talents.json'),
+  characterTitles: require('./samples/wow/character-titles.json'),
   failure: require('./samples/wow/failure.json')
 };
 
@@ -151,6 +174,127 @@ describe('Warcraft client', function() {
         .reply(400, JSON.stringify(mock.failure));
 
       client.getBosses(function(err, response) {
+        t.ok(err);
+        t.equal(response, undefined);
+        cb();
+      });
+    });
+
+  });
+
+  describe('getBoss()', function() {
+    var client = new WarcraftClient(defaultRequest);
+
+    it('should fail if the first parameter is not a number', function() {
+      t.throws(function() {
+        client.getBoss('hey', function() {});
+      });
+    });
+
+    it('should fail if the second parameter is a non function', function() {
+      t.throws(function() {
+        client.getBoss(1, 'hey');
+      });
+    });
+
+    it('should properly fetch json', function(cb) {
+      scope
+        .get('/wow/boss/1?locale=en_US&apikey=mockkey')
+        .reply(200, JSON.stringify(mock.boss));
+
+      client.getBoss(1, function(err, response) {
+        t.ifError(err);
+        cb();
+      });
+    });
+
+    it('should properly report errors on failure', function(cb) {
+      scope
+        .get('/wow/boss/1?locale=en_US&apikey=mockkey')
+        .reply(400, JSON.stringify(mock.failure));
+
+      client.getBoss(1, function(err, response) {
+        t.ok(err);
+        t.equal(response, undefined);
+        cb();
+      });
+    });
+
+  });
+
+  describe('getRealmLeaderboard()', function() {
+    var client = new WarcraftClient(defaultRequest);
+
+    it('should fail if the second parameter is a non function', function() {
+      t.throws(function() {
+        client.getRealmLeaderboard('maelstrom', 'hey');
+      });
+    });
+
+    it('should properly fetch json', function(cb) {
+      scope
+        .get('/wow/challenge/maelstrom?locale=en_US&apikey=mockkey')
+        .reply(200, JSON.stringify(mock.challengeRealm));
+
+      client.getRealmLeaderboard('maelstrom', function(err, response) {
+        t.ifError(err);
+        cb();
+      });
+    });
+
+    it('should use realm name as part of the path fetch json', function(cb) {
+      var realm = 'tichondrius';
+
+      scope
+        .get('/wow/challenge/' + realm + '?locale=en_US&apikey=mockkey')
+        .reply(200, JSON.stringify(mock.challengeRealm));
+
+      client.getRealmLeaderboard(realm, function(err, response) {
+        t.ifError(err);
+        cb();
+      });
+    });
+
+    it('should properly report errors on failure', function(cb) {
+      scope
+        .get('/wow/boss/1?locale=en_US&apikey=mockkey')
+        .reply(400, JSON.stringify(mock.failure));
+
+      client.getRealmLeaderboard('maelstrom', function(err, response) {
+        t.ok(err);
+        t.equal(response, undefined);
+        cb();
+      });
+    });
+
+  });
+
+  describe('getRegionLeaderboard()', function() {
+    var client = new WarcraftClient(defaultRequest);
+
+    it('should fail if the first parameter is a non function', function() {
+      t.throws(function() {
+        client.getRegionLeaderboard('hey');
+      });
+    });
+
+    it('should properly fetch json', function(cb) {
+      scope
+        .get('/wow/challenge/region?locale=en_US&apikey=mockkey')
+        .reply(200, JSON.stringify(mock.challengeRegion));
+
+      client.getRegionLeaderboard(function(err, response) {
+        t.ifError(err);
+        cb();
+      });
+    });
+
+    it('should properly report errors on failure', function(cb) {
+      scope
+        .get('/wow/challenge/region?locale=en_US&apikey=mockkey')
+        .reply(400, JSON.stringify(mock.challengeRegion));
+
+      client.getRegionLeaderboard(function(err, response) {
         t.ok(err);
         t.equal(response, undefined);
         cb();

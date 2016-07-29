@@ -13,61 +13,77 @@ Once you install it you can require it on any of your pages.
 
     var BlizzardClient = require('battlenet.js');
 
+## Notice
+
+I have redone the API wrapper from the old version, which reminded me of Java. The new version is a bit easier to use, but there have been loads of breaking changes. Stay on 1.0 if you don't want them.
+
+## Tests
+
+This package contains unit tests. I haven't written all of them, but the core should be stable enough in v2. A lot of the unit testing is boilerplate stuff to simulate real responses, so I have some level of confidence in it, though I haven't tested all of the endpoints myself.
+
+Run `grunt test` to run the tests. There are no prerequesites as long as you have installed `devDependencies`.
 
 ## Usage
 
-Samples coming soon! If the samples directory is in the project, it means they're here already and I'm bad at updating my readme.
-
 ```js
-    var BlizzardAPI = require("battlenet.js"),
-    var BlizzardClient = new Client('validAPIKey');
+    var BnetClient = require("battlenet.js"),
+    var client = new BnetClient('validAPIKey', {
+      region: 'us',
+      locale: 'en_US'
+    });
 ```
 
 You must put your API key in when you instantiate the client. Otherwise, it's going to throw an exception. Don't say I didn't warn you.
 
 From there, there are abstracted methods to allow you to access Battle.net data without having to deal with knowing the API endpoints and so on.
 
-I'll list them below
-
-## Performance
-
-The API does not implement any type of caching. I may introduce a cached implementation of the API later down the line, but it works as designed - it makes a request for every method you call.
+The client defaults to the US region in the `en_US` locale. If you need something else just pass configuration changes.
 
 ## Promises
 
-The API uses kew to expose a promise-based API on the Client. If you are unfamiliar with promises, you should get familiar with them. They are great tools. Here is an example from the testing suite. Yes... Chaosity is my character.
-
-```js
-    Blizzard.Games.Warcraft.Characters.get('Maelstrom', 'Chaosity')
-      .then(function (data) {
-        // Thanks for the data
-      })
-      .catch(function (err) {
-        // Something went wrong
-      });
-```
-
-After calling the API method, you retrieve the data asynchronously through a promise callback. Just make sure your code is within the `then` block and you'll have access to the data fetched from the API.
+__The API no longer uses promises. If you want a promise based API, use a library with lift support__
 
 # API
 
 ## Warcraft
 
-Here's the part everyone came to see. Just how do we get that data from the API? The API is organized by game. Currently, only World of Warcraft is supported. `client` will refer to an instantiated object of the BattleNetAPI Class.
+```js
+    var BnetClient = require("battlenet.js"),
+    var client = new BnetClient('validAPIKey', {
+      region: 'us',
+      locale: 'en_US'
+    });
 
-### client.Games.Warcraft.Achievements.getById(id)
+    // var warcraft = client.warcraft;
+```
+
+Here's the part everyone came to see. Just how do we get that data from the API? The API is organized by game. Currently, only World of Warcraft is supported. `client` will refer to an instantiated object of the main API class.
+
+### client.warcraft.getAchievement(id, cb)
 
 Fetches achievement data for a given achievement ID.
 
-### client.Games.Warcraft.Auctions.getByRealm(realm)
+### client.warcraft.getAuctionStatus(realm, cb)
 
 Fetches the auctions for a given realm
 
-### client.Games.Warcraft.Challenge.getRealmLeaderboard(realm)
+### client.warcraft.getBoss(id, cb)
 
-Returns realm leaderboards for a given realm.
+Gets a boss by ID
 
-### client.Games.Warcraft.Characters.get(realm, name, fields)
+### client.warcraft.getBosses(cb)
+
+Gets a list of bosses
+
+### client.warcraft.getRealmLeaderboard(realm, cb)
+
+Returns challenge mode leaderboards for a given realm.
+
+### client.warcraft.getRegionLeaderboard(cb)
+
+Gets challenge mode leaderboards for the currently configured region.
+
+### client.warcraft.getCharacter(realm, name, fields, cb)
 
 Returns a character specified. The fields object is an array of data keys for the data you are requesting. If you want to get responses faster, only request the data you're going to use.
 
@@ -75,90 +91,160 @@ For example:
 
 ```js
   var fields = ['feed', 'guild'];
-  client.Characters.get('Maelstrom', 'Chaosity', fields);
+  client.warcraft.getCharacter('Maelstrom', 'Chaosity', fields, function(err, response) {
+    if (err) {
+      throw err;
+    }
+  });
 ```
 
-### client.Games.Warcraft.Data.getBattlegroups()
+Here's a list of all the available fields
 
-Get a list of the battlegroups.
+```js
+/**
+ * All possible character fields for documentation purposes
+ * @type {Array}
+ */
+var characterFields = [
+  'achievements',
+  'appearance',
+  'feed',
+  'guild',
+  'hunterPets',
+  'items',
+  'mounts',
+  'pets',
+  'petSlots',
+  'professions',
+  'progression',
+  'pvp',
+  'quests',
+  'reputation',
+  'statistics',
+  'stats',
+  'talents',
+  'titles',
+  'audit'
+];
+```
 
-### client.Games.Warcraft.Data.getRaces()
-
-Gets a list of races and their corresponding IDs.
-
-### client.Games.Warcraft.Data.getClasses()
-
-Gets a list of classes and their corresponding IDs.
-
-### client.Games.Warcraft.Data.getAchievements()
-
-Gets a list of achievements and their IDs.
-
-### client.Games.Warcraft.Data.getGuildRewards()
-
-Gets a list of guild rewards.
-
-### client.Games.Warcraft.Data.getGuildPerks()
-
-Gets a list of guild parks (*RIP* Have Group, Will Travel)
-
-### client.Games.Warcraft.Data.getGuildAchievements()
-
-Gets a list of guild achievements.
-
-### client.Games.Warcraft.Data.getItemClasses()
-
-### client.Games.Warcraft.Data.getTalents()
-
-Gets a list of talents
-
-### client.Data.getPetTypes()
-
-For Pokémon masters. Gets a list of the pet types.
-
-### client.Guild.get(realm, name, fields)
+### client.warcraft.getGuild(realm, name, fields, cb)
 
 Get a guild on a given realm with a given name. Names will be normalized, so feel free to use spaces and all of that. Fields works the same way on guild as it does on character. Request the data you want by putting it in array (e.g. `['feed']`).
 
-### client.Games.Warcraft.Item.getItemByID(ID)
+```js
+/**
+ * All possible guild fields for documentation purposes
+ * @type {Array}
+ */
+var guildFields = [
+  'achievements',
+  'challenge',
+  'news'
+];
+```
+
+### client.warcraft.getItem(id, cb)
 
 Gets an item by its ID.
 
-### client.Games.Warcraft.Item.getSetByID(ID)
+### client.warcraft.getItemSet(id, cb)
 
 Gets a set of items by its set ID. Judgment anyone?
 
-### client.Games.Warcraft.Pets.getAbilityByID(ID)
+### client.warcraft.getMounts(cb)
+
+Gets a list of existing mounts.
+
+### client.warcraft.getPets(cb)
+
+Gets a list of existing pets
+
+### client.warcraft.getPetAbility(id, cb)
 
 Gets a pet ability by its ID
 
-### client.Games.Warcraft.Pets.getSpeciesByID(ID)
+### client.warcraft.getPetSpecies(id, cb)
 
 Gets a pet species by its ID
 
-### client.Games.Warcraft.Pets.getStatsBySpecies(speciesID)
+### client.warcraft.getPetStats(speciesID, cb)
 
 Gets pet stats based on their species ID
 
-### client.Games.Warcraft.Pvp.getByBracket(bracket)
+### client.warcraft.getPvpLeaderboard(bracket, cb)
 
-Gets leaderboards by bracket. E.g. `client.Pvp.getByBracket('3v3');`
+Gets leaderboards by bracket. E.g.
 
-### client.Games.Warcraft.Quests.getByID(ID)
+```js
+client.warcraft.getPvpLeaderboard('3v3', function(err, response) {
+
+});
+```
+
+### client.warcraft.getQuest(id, cb)
 
 Gets quest information by ID
 
-### client.Games.Warcraft.Realms.getStatusList()
+### client.warcraft.getRealmStatus(cb)
 
 Gets a list of realms and their realm status.
 
-### client.Games.Warcraft.Recipes.getByID(ID)
+### client.warcraft.getRecipe(id, cb)
 
 Gets a recipe by its ID
 
-### client.Games.Warcraft.Spells.getByID(ID)
+### client.warcraft.getSpell(id, cb)
 
 Gets a spell by its ID
+
+### client.warcraft.getZones(cb)
+
+Gets a list of zones.
+
+### client.warcraft.getZone(id, cb)
+
+Gets a zone by its ID
+
+### client.warcraft.getBattlegroups(cb)
+
+Gets a list of battlegroups.
+
+### client.warcraft.getCharacterRaces(cb)
+
+Gets a list of character races.
+
+### client.warcraft.getCharacterClasses(cb)
+
+Gets a list of character classes.
+
+### client.warcraft.getCharacterAchievements(cb)
+
+Gets a list of character achievements.
+
+### client.warcraft.getGuildRewards(cb)
+
+Gets a list of guild rewards.
+
+### client.warcraft.getGuildPerks(cb)
+
+Gets a list of guild perks.
+
+### client.warcraft.getGuildAchievements(cb)
+
+Gets a list of guild achievements.
+
+### client.warcraft.getItemClasses(cb)
+
+Gets a list of item classes.
+
+### client.warcraft.getTalents(cb)
+
+Gets a list of talents.
+
+### client.warcraft.getPetTypes(cb)
+
+Gets a list of pet types.
 
 # Other Stuff
 
