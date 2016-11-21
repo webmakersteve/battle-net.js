@@ -33,6 +33,7 @@ var mock = {
   characterStats: require('./samples/wow/character-stats.json'),
   characterTalents: require('./samples/wow/character-talents.json'),
   characterTitles: require('./samples/wow/character-titles.json'),
+  userCharacters: require('./samples/wow/user-characters.json'),
   failure: require('./samples/wow/failure.json')
 };
 
@@ -301,6 +302,27 @@ describe('Warcraft client', function() {
       });
     });
 
+  });
+
+  describe('getUserCharacters', function() {
+    var client = new WarcraftClient(defaultRequest);
+
+    it('should fail if the first parameter is not a string', function() {
+      t.throws(function() {
+        client.getUserCharacters();
+      }, '"token" must be a string');
+    });
+
+    it('should properly fetch json', function(cb) {
+      scope
+        .get('/wow/user/characters?locale=en_US&apikey=mockkey')
+        .reply(200, JSON.stringify(mock.userCharacters));
+
+      client.getUserCharacters('mocktoken', function(err, response) {
+        t.ifError(err);
+        cb();
+      });
+    });
   });
 
 });

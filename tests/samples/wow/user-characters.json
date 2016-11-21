@@ -1,0 +1,122 @@
+{
+    "characters": [
+        {
+            "name": "Elaana",
+            "realm": "Antonidas",
+            "battlegroup": "Vengeance / Rache",
+            "class": 6,
+            "race": 11,
+            "gender": 1,
+            "level": 92,
+            "achievementPoints": 5815,
+            "thumbnail": "antonidas/255/85139711-avatar.jpg",
+            "spec": {
+                "name": "Blood",
+                "role": "TANK",
+                "backgroundImage": "bg-deathknight-blood",
+                "icon": "spell_deathknight_bloodpresence",
+                "description": "A dark guardian who manipulates and corrupts life energy to sustain herself in the face of an enemy onslaught.",
+                "order": 0
+            },
+            "lastModified": 1474476541000
+        },
+        {
+            "name": "Omgitsboss",
+            "realm": "Antonidas",
+            "battlegroup": "Vengeance / Rache",
+            "class": 12,
+            "race": 4,
+            "gender": 1,
+            "level": 110,
+            "achievementPoints": 7700,
+            "thumbnail": "antonidas/176/94885040-avatar.jpg",
+            "spec": {
+                "name": "Vengeance",
+                "role": "TANK",
+                "backgroundImage": "bg-warlock-demonology",
+                "icon": "ability_demonhunter_spectank",
+                "description": "Embraces the demon within to incinerate enemies and protect their allies.",
+                "order": 1
+            },
+            "guild": "Käsekuchenmafia",
+            "guildRealm": "Antonidas",
+            "lastModified": 1479687237000
+        },
+        {
+            "name": "Mtx",
+            "realm": "Azuremyst",
+            "battlegroup": "Glutsturm / Emberstorm",
+            "class": 8,
+            "race": 10,
+            "gender": 1,
+            "level": 100,
+            "achievementPoints": 8085,
+            "thumbnail": "azuremyst/72/63750728-avatar.jpg",
+            "spec": {
+                "name": "Fire",
+                "role": "DPS",
+                "backgroundImage": "bg-mage-fire",
+                "icon": "spell_fire_firebolt02",
+                "description": "Ignite enemies with balls of fire and combustive flames.",
+                "order": 1
+            },
+            "guild": "Hitmen for hire",
+            "guildRealm": "Azuremyst",
+            "lastModified": 1479010285000
+        },
+        {
+            "name": "Qntm",
+            "realm": "Antonidas",
+            "battlegroup": "Vengeance / Rache",
+            "class": 1,
+            "race": 22,
+            "gender": 0,
+            "level": 37,
+            "achievementPoints": 5710,
+            "thumbnail": "antonidas/63/85008191-avatar.jpg",
+            "spec": {
+                "name": "Fury",
+                "role": "DPS",
+                "backgroundImage": "bg-warrior-fury",
+                "icon": "ability_warrior_innerrage",
+                "description": "A furious berserker wielding a weapon in each hand, unleashing a flurry of attacks to carve her opponents to pieces.",
+                "order": 1
+            },
+            "lastModified": 1470861400000
+        },
+        {
+            "name": "Elonna",
+            "realm": "Antonidas",
+            "battlegroup": "Vengeance / Rache",
+            "class": 7,
+            "race": 11,
+            "gender": 1,
+            "level": 105,
+            "achievementPoints": 0,
+            "thumbnail": "antonidas/106/96469866-avatar.jpg",
+            "guild": "Käsekuchenmafia",
+            "guildRealm": "Antonidas",
+            "lastModified": 1479518512000
+        },
+        {
+            "name": "Artamir",
+            "realm": "Proudmoore",
+            "battlegroup": "Vengeance / Rache",
+            "class": 3,
+            "race": 1,
+            "gender": 0,
+            "level": 73,
+            "achievementPoints": 5515,
+            "thumbnail": "proudmoore/205/74627789-avatar.jpg",
+            "spec": {
+                "name": "Beast Mastery",
+                "role": "DPS",
+                "backgroundImage": "bg-hunter-beastmaster",
+                "icon": "ability_hunter_bestialdiscipline",
+                "description": "A master of the wild who can tame a wide variety of beasts to assist her in combat.",
+                "order": 0
+            },
+            "lastModified": 1424896660000
+        }
+    ]
+}

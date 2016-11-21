@@ -246,6 +246,10 @@ Gets a list of talents.
 
 Gets a list of pet types.
 
+### client.warcraft.getUserCharacters(token, cb)
+
+Gets a list of all characters of the user associated with the specified access token.
+
 # Other Stuff
 
 If you like my code, star it! If you use it, tell me about it! I'd love to hear how you can make use of this code in your application.
