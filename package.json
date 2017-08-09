@@ -1,6 +1,6 @@
 {
   "name": "battlenet.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Enables use of the Blizzard Battle.net API",
   "main": "lib/battlenet.js",
   "scripts": {
